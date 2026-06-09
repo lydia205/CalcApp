@@ -52,7 +52,10 @@ class MainActivity : AppCompatActivity() {
                  sum += numberArray[i]
                  i++
 
-                 // Apply the for
+                 // Apply the formula: Average = sum/ number of values
+                 val Average = sum.toDouble() / counter
+
+                 txtMessage.text = "Average: + average.toString ()"
              }
          }
 
