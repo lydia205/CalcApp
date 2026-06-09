@@ -23,8 +23,8 @@ class MainActivity : AppCompatActivity() {
         //get Ui from Activity_main
         val editNum = findViewById<EditText>(R.id.editNum)
         val txtMessage = findViewById<TextView>(R.id.txtMessage)
-        val txtList = findViewById<TextView>(R.id.txtList)
         val btnSave = findViewById<Button>(R.id.btnSave)
+        val btnAverage = findViewById<Button>(R.id.btnAverage)
 
         //added button
         btnSave?.setOnClickListener {
@@ -39,11 +39,14 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        // added my second button
+        btnAverage?.setOnClickListener {
+            
+        }
 
 
 
-
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.editNum)) { v, insets ->
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.btnAverage)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
