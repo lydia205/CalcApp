@@ -41,8 +41,24 @@ class MainActivity : AppCompatActivity() {
 
         // added my second button
         btnAverage?.setOnClickListener {
-            
+         if (counter ==0) {
+             txtMessage.text="please enter some number frist"
+         } else {
+             var sum = 0
+             var i = 0
+
+             // the while loop running through the saved slots
+             while (i < counter){
+                 sum += numberArray[i]
+                 i++
+
+                 // Apply the for
+             }
+         }
+
+
         }
+
 
 
 
