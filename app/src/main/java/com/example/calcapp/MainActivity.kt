@@ -1,6 +1,9 @@
 package com.example.calcapp
 
 import android.os.Bundle
+import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -12,7 +15,11 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
-        //ge
+        //get Ui from Activity_main
+        val editNum = findViewById<EditText>(R.id.editNum)
+        val txtMessage = findViewById<TextView>(R.id.txtMessage)
+        val txtList = findViewById<TextView>(R.id.txtList)
+        val btnSave = findViewById<Button>(R.id.btnSave)
 
 
 
