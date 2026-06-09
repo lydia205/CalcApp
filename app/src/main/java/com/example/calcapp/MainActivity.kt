@@ -13,6 +13,7 @@ class MainActivity : AppCompatActivity() {
 
    // declared the array of my ten size
     val numberArray = IntArray(10)
+    var counter = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,6 +25,19 @@ class MainActivity : AppCompatActivity() {
         val txtMessage = findViewById<TextView>(R.id.txtMessage)
         val txtList = findViewById<TextView>(R.id.txtList)
         val btnSave = findViewById<Button>(R.id.btnSave)
+
+        //added button
+        btnSave?.setOnClickListener {
+            val input = editNum.text.toString().toInt()
+
+            if (counter >=10) {
+                txtMessage.text = " More value cannot be stored."
+            } else {
+                numberArray[counter] = input
+                counter ++
+                editNum.text.clear()
+            }
+        }
 
 
 
